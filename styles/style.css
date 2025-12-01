@@ -1,84 +1,84 @@
-.filter-grayscale {
-  filter: grayscale(70%);
+.filter-1 {
+  filter: sepia(0.5) hue-rotate(-15deg) saturate(1.2);
 }
 
-.filter-multiple {
-  filter: contrast(50%) hue-rotate(35deg) saturate(130%);
+.filter-2 {
+  filter: sepia(0.3) hue-rotate(-25deg) saturate(1.3) contrast(1.1);
 }
 
-.filter-hue-rotate {
-  filter: hue-rotate(210deg);
+.filter-3 {
+  filter: sepia(0.4) hue-rotate(-10deg) brightness(1.05);
 }
 
-.filter-saturate {
-  filter: saturate(250%);
+.filter-4 {
+  filter: sepia(0.6) hue-rotate(-35deg) saturate(1.1);
 }
 
-.filter-invert {
-  filter: invert(100%);
+.filter-5 {
+  filter: sepia(0.25) hue-rotate(-20deg) saturate(1.05);
 }
 
-.filter-sepia {
-  filter: sepia(90%);
+.filter-6 {
+  filter: sepia(0.7) hue-rotate(-45deg) saturate(1.4);
 }
 
-.filter-blur {
-  filter: blur(10px);
+.filter-7 {
+  filter: sepia(0.35) hue-rotate(-30deg) saturate(1.15) brightness(1.08);
 }
 
 .page {
-  padding-block-start: 100px;
-  color: var(--text-color, #000000);
-  font-family: var(--page-main-font-family, "Inter", sans-serif);
-  background-color: var(--page-background-color, #ffffff);
-  background-image: var(--page-background-image, none);
+  padding-top: 101px;
+  color: var(--txt-clr, #000000);
+  font-family: var(--ff-main, "Inter", sans-serif);
+  background-color: var(--bg-clr, #ffffff);
+  background-image: var(--bg-img, none);
   background-size: cover;
   background-attachment: fixed;
-  font-variation-settings: "wght" var(--page-main-font-weight, 400);
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--fw-base, 400);
+  min-width: 321px;
+  min-height: 100dvb;
 }
 
 .page__header {
-  margin-block-end: 100px;
+  margin-bottom: 99px;
 }
 
 .modal {
-  border: 2px solid var(--text-color, #000000);
-  padding: 25px 30px;
-  color: var(--text-color, #000000);
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
-  line-height: 1.5;
+  border: 2px solid var(--txt-clr, #000000);
+  padding: 24px 31px;
+  color: var(--txt-clr, #000000);
+  font-family: var(--ff-accent, "Press Start 2P", fantasy);
+  line-height: 1.6;
   text-transform: uppercase;
-  background: var(--page-background-color, #ffffff);
-  max-inline-size: 355px;
+  background: var(--bg-clr, #ffffff);
+  max-width: 356px;
 }
 
 .modal[open] {
   display: grid;
   grid-template-rows: repeat(2, min-content);
-  gap: 30px;
+  gap: 29px;
 }
 
 .modal::backdrop {
-  opacity: 0.75;
-  background: var(--color-black, #000000);
+  opacity: 0.74;
+  background: var(--clr-black, #000000);
 }
 
 .modal__content {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 17px;
 }
 
 .modal__icon {
   flex-shrink: 0;
-  inline-size: 39px;
-  block-size: 39px;
+  width: 40px;
+  height: 40px;
 }
 
 .modal__button {
-  inline-size: 100%;
+  width: 100%;
 }
 
 .page-title {
@@ -89,35 +89,35 @@
   display: grid;
   justify-items: center;
   justify-content: center;
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  font-family: var(--ff-accent, "Press Start 2P", fantasy);
   line-height: normal;
   text-transform: uppercase;
 }
 
 .header__title {
-  margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
-  margin-block-end: 20px;
-  font-family: 'Press Start 2P';
+  margin-top: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
+  margin-bottom: 21px;
+  font-family: var(--ff-accent, "Press Start 2P", fantasy);
 }
 
 .header__subtitle {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  background: var(--color-white, #ffffff);
-  color: var(--color-black, #000000);
+  background: var(--clr-white, #ffffff);
+  color: var(--clr-black, #000000);
   display: inline-block;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-family: 'Press Start 2P';
-  }
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  font-family: var(--ff-accent, "Press Start 2P", fantasy);
+}
 
 .header__theme-menu {
-  margin-block: 25px;
+  margin: 24px 0;
 }
 
 .theme-menu__list {
   display: grid;
-  gap: 8px;
-  padding-inline-start: 20px;
+  gap: 9px;
+  padding-left: 21px;
 }
 
 .theme-menu__button {
@@ -138,17 +138,17 @@
   transition: transform 0.3s ease;
   transform: scaleX(0);
   transform-origin: left;
-  inline-size: 100%;
-  block-size: 2px;
+  width: 100%;
+  height: 2px;
 }
 
 .theme-menu__button:hover {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .theme-menu__button:focus {
   outline: none;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -156,7 +156,7 @@
 }
 
 .theme-menu__button:disabled {
-  opacity: 0.6;
+  opacity: 0.7;
   cursor: default;
   pointer-events: none;
 }
@@ -165,95 +165,89 @@
   content: "▶";
   position: absolute;
   animation: arrow 0.5s ease-in-out infinite alternate;
-  inset-inline-start: -20px;
-  /* Safari fix */
-  inset-block-start: 0px;
+  left: -21px;
+  top: 1px;
 }
 
 .main {
   display: grid;
   justify-items: center;
-  gap: 57px;
-  padding-block-end: 105px;
+  gap: 58px;
+  padding-bottom: 106px;
 }
 
 .cards-list {
+  margin-top: 100px;
   display: grid;
-  gap: 52px;
+  gap: 51px;
 }
 
 .card {
-  margin-inline: auto;
-  border: 2px solid var(--text-color, #000000);
-  background: var(--page-background-color, #ffffff);
-  max-inline-size: 696px;
+  margin: 0 auto;
+  border: 2px solid var(--txt-clr, #000000);
+  background: var(--bg-clr, #ffffff);
+  max-width: 697px;
 }
 
 .card__header {
-  border-block-end: 2px solid var(--text-color, #000000);
-  padding: 4px 10px;
+  border-bottom: 2px solid var(--txt-clr, #000000);
+  padding: 5px 11px;
 }
 
 .card__title {
-  font-size: 18px;
+  font-size: 19px;
   line-height: normal;
-  font-variation-settings: "wght" var(--headings-font-weight, 700);
+  font-variation-settings: "wght" var(--fw-bold, 700);
 }
 
 .card__img-wrapper {
   position: relative;
-  /* overflow - для коррекции эффектов filter blur */
   overflow: hidden;
 }
 
 .card__img-label {
   position: absolute;
   z-index: 1;
-
-  opacity: 0.5;
-
-  color: var(--text-color, #000000);
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
-
-  font-size: 14px;
+  opacity: 0.6;
+  color: var(--txt-clr, #000000);
+  font-family: var(--ff-accent, "Press Start 2P", fantasy);
+  font-size: 15px;
   line-height: normal;
-
-  text-shadow: 0 0 1px var(--page-background-color, #ffffff);
-  inset-inline-end: 13px;
-  inset-block-start: 24px;
-
+  text-shadow: 0 0 2px var(--bg-clr, #ffffff);
+  right: 14px;
+  top: 25px;
   mix-blend-mode: hard-light;
 }
 
 .card__img {
   display: block;
   object-fit: cover;
-  object-position: right;
-  inline-size: 100%;
+  object-position: center;
+  width: 100%;
   aspect-ratio: 1 / 1;
 }
 
 .card__content {
   display: grid;
-  gap: 27px;
-  border-block-start: 2px solid var(--text-color, #000000);
-  padding: 25px 30px 0 25px;
-  font-size: 18px;
-  line-height: calc(21 / 18);
+  gap: 28px;
+  border-top: 2px solid var(--txt-clr, #000000);
+  padding: 26px 31px 1px 26px;
+  font-size: 19px;
+  line-height: calc(22 / 19);
 }
 
 .card__footer {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: stretch;
-  gap: 5px;
-  padding: 25px 25px 23px 25px;
+  gap: 6px;
+  padding: 26px 26px 24px 26px;
 }
 
 .card__icon-button {
   display: grid;
   border: 2px solid transparent;
-  padding: 0;
+  padding: 1px;
   background: transparent;
   transition: border-color 0.3s ease;
   cursor: pointer;
@@ -265,18 +259,18 @@
 }
 
 .card__icon-button:focus-visible {
-  border-color: var(--text-color, #000000);
+  border-color: var(--txt-clr, #000000);
 }
 
 .button {
   position: relative;
   z-index: 1;
-  border: 2px solid var(--text-color, #000000);
-  padding: 10px 36px;
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
-  font-size: 14px;
+  border: 2px solid var(--txt-clr, #000000);
+  padding: 11px 37px;
+  font-family: var(--ff-accent, "Press Start 2P", fantasy);
+  font-size: 15px;
   text-transform: inherit;
-  background: var(--page-background-color, #ffffff);
+  background: var(--bg-clr, #ffffff);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   appearance: none;
@@ -287,20 +281,23 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0px 0px var(--text-color, #000000);
+  box-shadow: 3px 3px 0px 0px var(--txt-clr, #000000);
 }
 
 .button::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: -1;
-  background: var(--text-color, #000000);
+  background: var(--txt-clr, #000000);
   transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
-  inline-size: 100%;
-  block-size: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .button:hover::before {
@@ -312,31 +309,37 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  padding: 15px 20px;
+  gap: 11px;
+  padding: 16px 21px;
 }
 
-.button__text,
-.button__icon {
-  color: var(--button-text-color, #ffffff);
+.button__text {
+  color: var(--btn-txt, #ffffff);
   mix-blend-mode: difference;
 }
 
 .button__icon {
-  block-size: 22px;
-  inline-size: 22px;
+  height: 23px;
+  width: 23px;
+}
+
+.button--save .button__icon {
+  transition: filter 0.4s ease;
+}
+
+.button--save:hover .button__icon {
+  filter: invert(1);
 }
 
 .like-icon {
-  block-size: 36px;
-  inline-size: 39px;
+  height: 37px;
+  width: 40px;
 }
 
-/* 376 взято так как в фигме на 375 уже стоят определенные стили, а при использовании width <= 375px 375 все еще включает в себя стили для значений больше 375 ???? */
 @media (width < 376px) {
   .modal {
-    padding: 28px 34px 28px 40px;
-    max-inline-size: 340px;
+    padding: 27px 35px 27px 41px;
+    max-width: 341px;
   }
 
   .button--save {
@@ -344,18 +347,18 @@
   }
 
   .button__icon {
-    block-size: 28px;
-    inline-size: 28px;
+    height: 29px;
+    width: 29px;
   }
 }
 
 @supports (
-  (-webkit-text-stroke: 1px var(--page-background-color, #ffffff)) or
-    (text-stroke: 1px var(--page-background-color, #ffffff))
+  (-webkit-text-stroke: 1px var(--bg-clr, #ffffff)) or
+    (text-stroke: 1px var(--bg-clr, #ffffff))
 ) {
   .card__img-label {
     text-shadow: none;
-    -webkit-text-stroke: 1px var(--page-background-color, #ffffff);
-    text-stroke: 1px var(--page-background-color, #ffffff);
+    -webkit-text-stroke: 2px var(--bg-clr, #ffffff);
+    text-stroke: 2px var(--bg-clr, #ffffff);
   }
 }
